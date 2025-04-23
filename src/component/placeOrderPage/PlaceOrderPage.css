@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --primary-color: #e74c3c;
+    --secondary-color: #2c3e50;
+    --bg-color: #f5f6fa;
+    --card-bg: #ffffff;
+}
+
+.place-order-body {
+    background-color: var(--bg-color);
+    
+    overflow: hidden;
+}
+
+.place-order-header{
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.place-order-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.place-order-search-container {
+    margin-left: 2rem;
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.place-order-search-box {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.place-order-search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.25rem;
+    font-size: 1rem;
+}
+
+.place-order-search-box i {
+    color: #666;
+    margin-right: 0.5rem;
+}
+
+.place-order-main-container {
+    display: grid;
+    grid-template-columns: auto 1fr 350px;
+    height: calc(100vh - 64px);
+}
+
+.place-order-categories {
+    width: 100px;
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    height: 100%;
+}
+
+.place-order-category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.place-order-category-item:hover {
+    background-color: var(--primary-color);
+}
+
+.place-order-category-item i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.place-order-category-item span {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.place-order-items-grid {
+    padding: 1.5rem;
+    /* overflow-y: auto; */
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.place-order-item-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    
+}
+
+.place-order-item-card:hover {
+    transform: translateY(-5px);
+}
+
+.place-order-item-image {
+    width: 100%;
+    height: 150px;
+    background-color: #eee;
+}
+
+.place-order-item-details {
+    padding: 1rem;
+}
+
+.place-order-item-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.place-order-item-price {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.place-order-item-qty {
+    color: black;
+    font-weight: bold;
+}
+
+.place-order-cart-container {
+    background-color: var(--card-bg);
+    border-left: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.place-order-cart-header {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.place-order-cart-items {
+    flex-grow: 1;
+    /* overflow-y: auto; */
+    overflow: auto;
+    padding: 1rem;
+}
+
+.place-order-cart-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    overflow: auto;
+}
+
+.place-order-cart-item-details {
+    flex-grow: 1;
+    padding: 0 1rem;
+}
+
+.place-order-cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.place-order-quantity-btn {
+    background-color: var(--bg-color);
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.place-order-quantity-btn-close{
+/*     position: relative;
+    top: -1.7rem;
+    left: 18rem; */
+    background-color: red;
+    border: none;    
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.place-order-cart-summary {
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    /* overflow-y: auto; */
+}
+
+.place-order-total-amount {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.place-order-payment-input {
+    margin-bottom: 1rem;
+}
+
+.place-order-payment-input input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.place-order-print-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.place-order-print-btn:hover {
+    background-color: #c0392b;
+}
+
+
+
+/* Customer Selection Dropdown Styles */
+.place-order-customer-dropdown-container {
+    position: relative;
+    margin-top: 8px;
+  }
+  
+  .place-order-selected-customer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .place-order-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .place-order-search-customer {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .place-order-search-customer input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .place-order-customers-list {
+    padding: 8px 0;
+  }
+  
+  .place-order-customer-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .place-order-customer-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .place-order-customer-name {
+    font-weight: 500;
+  }
+  
+  .place-order-customer-phone {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .place-order-no-customers {
+    padding: 12px;
+    text-align: center;
+    color: #666;
+  }
+  
+  .place-order-add-new-customer {
+    padding: 8px;
+    text-align: center;
+    border-top: 1px solid #eee;
+  }
+  
+  .place-order-add-new-customer button {
+    background-color: transparent;
+    color: #1976d2;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+  
+  .place-order-add-new-customer button:hover {
+    text-decoration: underline;
+  }

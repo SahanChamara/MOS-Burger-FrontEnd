@@ -19,7 +19,7 @@ WORKDIR /usr/share/nginx/html
 
 RUN rm -rf *
 
-COPY --from=build /appp/build .
+COPY --from=build /app/build .
 
 EXPOSE 80
 

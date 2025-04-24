@@ -46,7 +46,7 @@ const SignIn = () => {
             <div className="form-header">
               {erorMsg && <p className="error-msg">{erorMsg}</p>}
               <h1>Login to POS</h1>
-              <p>Enter your credentials to access the system</p>
+              <p>Enter your credentials to access the System</p>
             </div>
             <form onSubmit={handleSubmit}>
               <div className="input-group">

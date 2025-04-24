@@ -1,13 +1,25 @@
-FROM node:22-alpine
+# build the react app
+FROM node:20-alpine as build
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json .
 
 RUN npm install
 
 COPY . .
 
-EXPOSE 5173
+RUN npm run build
 
-CMD ["npm", "run", "dev"]
+# Server with Ngiinx
+FROM nginx:1.23-alpine
+
+WORKDIR /usr/share/nginx/html
+
+RUN rm -rf *
+
+COPY --from=build /appp/build .
+
+EXPOSE 80
+
+ENTRYPOINT [ "nginx", "-g", "daemon off;"]

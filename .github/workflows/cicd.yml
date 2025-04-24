@@ -25,7 +25,7 @@ jobs:
             - name: Pull the Image from Docker Hub
               run: docker pull sahandev/mos_burger_frontend:latest
             - name: Delete Old Contaiiner
-              run: docker -rm -f mos_burger_container
+              run: docker rm -f mos_burger_container
             - name: Run Docker Container
               run: docker run -d -p 5173:80 --name mos_burger_container sahandev/mos_burger_frontend
             

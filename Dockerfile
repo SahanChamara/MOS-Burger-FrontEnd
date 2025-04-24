@@ -1,6 +1,7 @@
 # build the react app
 FROM node:20-alpine as build
 
+# Make the Working Directory
 WORKDIR /app
 
 COPY package.json .
